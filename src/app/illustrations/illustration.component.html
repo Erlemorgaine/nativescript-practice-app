@@ -1,0 +1,26 @@
+<ActionBar title="Erle's app"></ActionBar>
+
+<GridLayout rows="auto, *">
+
+  <GridLayout row="0" columns="*, auto" class="add-bar">
+    <TextField #itemTextField hint="Enter something" col="0"></TextField>
+  </GridLayout>
+
+  <RadListView row="1" [items]="list" swipeActions="true"
+               (itemSwipeProgressStarted)="onSwipeCellStarted($event)">
+
+    <ng-template let-item="item">
+      <Label [text]="item.name" class="p-15"></Label>
+    </ng-template>
+
+    <GridLayout *tkListItemSwipeTemplate columns="*, auto">
+      <StackLayout id="delete-view" col="1" (tap)="delete($event)" class="delete-view">
+        <Label text="+"></Label>
+      </StackLayout>
+    </GridLayout>
+  </RadListView>
+
+  <ActivityIndicator [busy]="isLoading" [visibility]="isLoading ? 'visible' : 'collapse'" row="1"
+  horizontalAlignment="center" verticalAlignment="center"></ActivityIndicator>
+</GridLayout>
+

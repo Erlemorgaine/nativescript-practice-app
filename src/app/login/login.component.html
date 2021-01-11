@@ -1,0 +1,15 @@
+<FlexboxLayout>
+
+  <StackLayout class="form">
+    <ContentView class="sun"></ContentView>
+
+    <TextField hint="Email Address" keyboardType="email" class="input input-border"
+               autocorrect="false" autocapitalizationType="none" [(ngModel)]="user.email"></TextField>
+    <TextField hint="Password" secure="true" class="input input-border" [(ngModel)]="user.password">
+    </TextField>
+
+    <Button [text]="'Sign in'" class="btn btn-primary" (tap)="submit('ill1')"></Button>
+    <Button [text]="'To the playground'" class="btn" [nsRouterLink]="['/play']" pageTransition="slideBottom"></Button>
+    <Button [text]="'To speech recognition'" class="btn" [nsRouterLink]="['/speech']" pageTransition="slideBottom"></Button>
+  </StackLayout>
+</FlexboxLayout>

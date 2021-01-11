@@ -1,0 +1,9 @@
+.categories {
+    margin: 10;
+}
+
+.categories__item {
+    background-color: #ffb700;
+    margin: 5;
+    border-radius: 10px;
+}

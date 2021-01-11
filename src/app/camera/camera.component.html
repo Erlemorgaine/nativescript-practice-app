@@ -1,0 +1,19 @@
+<ActionBar title="Take a pic"></ActionBar>
+
+<ScrollView>
+  <StackLayout>
+    <Label text="{{ title }}"></Label>
+    <TextField [(ngModel)]="title" hint="Enter title..."></TextField>
+
+    <DatePicker year="{{ year }}" month="{{ month }}" day="{{ day }}"></DatePicker>
+
+    <ListPicker items="{{ genders }}" selectedIndex="{{ gender }}"></ListPicker>
+
+    <Image [src]="image" stretch="none"></Image>
+    <Button (tap)="onAddImage()" text="Add image"></Button>
+    <Button (tap)="onDone()" text="Done"></Button>
+  </StackLayout>
+</ScrollView>
+
+
+

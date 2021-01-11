@@ -1,0 +1,9 @@
+.delete-view {
+    background-color: darkred;
+    color: white;
+    padding: 20;
+}
+
+.delete-view Label {
+    color: white;
+}

@@ -1,0 +1,25 @@
+<ActionBar title="Take a pic"></ActionBar>
+
+<StackLayout>
+
+  <DropDown [items]="languages" [(ngModel)]="currentLanguage">
+  </DropDown>
+
+  <Label [text]="userText"></Label>
+  <Button class="fa" [text]="'&#xf130;'" (tap)="startListening()">
+  </Button>
+
+  <Button [text]="'Press to hear me'" (tap)="speak(appText)"></Button>
+
+  <RadListView class="categories" [items]="categories" height="100%">
+    <ListViewGridLayout tkListViewLayout scrollDirection="Vertical" spanCount="3">
+      <ng-template tkListItemTemplate let-item="item">
+        <Label class="categories__item" [text]="item"></Label>
+      </ng-template>
+    </ListViewGridLayout>
+  </RadListView>
+</StackLayout>
+
+
+
+

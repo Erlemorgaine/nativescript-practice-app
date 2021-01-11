@@ -1,0 +1,26 @@
+<ActionBar title="Erle's app"></ActionBar>
+<ScrollView>
+  <StackLayout>
+      <Label [textWrap]="true" [text]="'This is a very long text and it doesnt fit on my phone at aaaaaaaaaaaaaaaaaaaaaaall'"></Label>
+      <Label [text]="'Subject'"></Label>
+      <TextField [(ngModel)]="message.subject" hint="Enter a subject"></TextField>
+      <TextView [(ngModel)]="message.message" hint="Enter a message"></TextView>
+    <Button text="Submit" (tap)="onTap()"></Button>
+
+    <GridLayout rows="*, *, *" columns="*, *" height="200">
+
+      <Label row="0" col="0" style="background-color: #94ae45" text="This is a cell"></Label>
+      <Label row="0" col="1" style="background-color: #45aea5"></Label>
+
+      <Button row="1" col="0" text="Take pic" [nsRouterLink]="['/camera']" pageTransition="slideBottom"></Button>
+      <StackLayout row="1" col="1" orientation="horizontal">
+        <Label text="Test"></Label>
+        <Label text="Test2"></Label>
+      </StackLayout>
+
+      <Label style="background-color: #d4aed7" row="2" col="0"  colSpan="2" text="This is a third cell that spans multiple columns"></Label>
+
+    </GridLayout>
+  </StackLayout>
+</ScrollView>
+
